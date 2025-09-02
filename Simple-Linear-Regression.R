@@ -19,3 +19,9 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 # Calculate correltiaon value between mpg and disp
 cor(cars$mpg, cars$disp)
 [1] -0.8475514
+
+#Split training and testing data for regression
+training_data <- cars[1:16,
+test_data <- cars[17:32,]
+
+# Build a regression model
