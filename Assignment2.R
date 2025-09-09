@@ -26,3 +26,18 @@ lm(formula = mpg ~ gear, data = training_data)
 Coefficients:
 (Intercept)         gear  
     -0.6571       5.4857  
+ prediction_result <- predict(regression_result, test_data)
+> actual_prediction_values <- data.frame(cbind(actuals=training_data$mpg, predicteds=prediction_result))
+> prediction_result
+Chrysler Imperial          Fiat 128       Honda Civic 
+         15.80000          21.28571          21.28571 
+   Toyota Corolla     Toyota Corona  Dodge Challenger 
+         21.28571          15.80000          15.80000 
+      AMC Javelin        Camaro Z28  Pontiac Firebird 
+         15.80000          15.80000          15.80000 
+        Fiat X1-9     Porsche 914-2      Lotus Europa 
+         21.28571          26.77143          26.77143 
+   Ford Pantera L      Ferrari Dino     Maserati Bora 
+         26.77143          26.77143          26.77143 
+       Volvo 142E 
+         21.28571 
